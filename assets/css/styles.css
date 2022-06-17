@@ -1,20 +1,27 @@
-.boxColor {
-    background: blue
+* {
+    box-sizing: border-box;
 }
 
-.box1 {
-    margin: 40px;
-    padding: 20px;
-    border: blue solid 5px;
-    display: block;
-    float: left;
+:root {
+ --primary: white;
+ --text: #222222;
+ --answer: #2d9b7c;
+ --clickbtn: rgb(0, 166, 255);   
 }
 
-.box2 {
-    margin-right: 0px;
+body {
+    background: var(--primary);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Veranda, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.box3 {
-    margin-top: 20px;
-    padding: 20px;
+header {
+    background: #999999;
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: #555555 solid 5px;
+     
 }

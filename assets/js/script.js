@@ -31,7 +31,37 @@ document.getElementById("box1").addEventListener("mouseover", changeState);
     };
 
 // start screen with start button
+
 /* onClick "hidden" class applies to start screen AND is removed from questions */
 // when clicked: hides start screen
 // reveales questions
 // starts timer
+
+
+
+// SCORING
+
+// HIGHSCORE storage: see localStorage
+var highScoreList = [
+    'x1', 
+    "x2", 
+    "x3",
+    "x4",
+    "x5"
+];
+
+var displayHighscore = function () {
+    var text = "";
+    var highScore = localStorage.getItem("highScoreList");
+    var highScoreArray = JSON.parse(highScore);
+    for (var i = 0; i < highScoreArray.length; i++) {
+        text += highScoreList[i] + "<br>";
+    };
+};
+
+displayHighscore ();
+
+
+/* BONUS */
+
+// use eventListener mouseover to change button color 
