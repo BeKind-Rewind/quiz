@@ -24,22 +24,42 @@ var answerQuestion5Correct="Commodore 64"
 var answerQuestion6Correct="Intel Corporations"
 //make starting screen
 
-document.getElementById("box1").addEventListener("mouseover", changeState);
+document.getElementById("start").addEventListener("click", changeState);
     function changeState() {
-        document.getElementById("box1").innerHTML = "QUESTIONS!";
-        document.getElementById("box1").style.backgroundcolor = "orange";
+        document.getElementById("start").state = "hidden";
+        document.getElementById("quiz").state = "visible";
     };
 
 // start screen with start button
 
 /* onClick "hidden" class applies to start screen AND is removed from questions */
-// when clicked: hides start screen
-// reveales questions
+// when clicked: hides start screen ?changeState("hidden");? 
+buttonEl.addEventListener("click", function() {
+    startEl.setAttribute("hidden");
+    // reveales questions
+    quizEl.setAttribute("visible");
+  });
+
 // starts timer
 
+var counter = 100
+var countdown = function (){
+    console.log(counter);
+    counter--;
+        if(counter === 0 ){
+            console.log("blastoff");
+            clearInterval(startCountdown);
+        };   
+};
+
+var startCountdown = setInterval(countdown, 1000);
+// when timer reaches 0, clearInterval 
+// use setTimeout to execute at the same time that the timer reaches 0? and run funtion that displays screen with score and input initials
 
 
-// SCORING
+// SCORING: number of correct answers in the time given.
+// PENALTY: incorrect answer subtracts 10 seconds from timer.
+
 
 // HIGHSCORE storage: see localStorage
 var highScoreList = [
