@@ -50,3 +50,21 @@ header {
     box-shadow: 0 0px var(--shadow);
     top: 0;
   }
+
+  /* @media screen and (max-width: 900px)
+
+  /* element style affects the boxes:
+
+  * {
+    box-sizing: border-box; (keeps the boxes from running out to infinity or under another box)
+  }
+
+  .page-content {
+  flex: 1; (makes boxes taller)
+  display: flex; (creates columns next to each other)
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px auto; (centers the content better)
+  width: 95%; (centers the content much better)
+}
+    */ 

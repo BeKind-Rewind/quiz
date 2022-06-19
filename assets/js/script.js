@@ -55,7 +55,7 @@ var countdown = function (){
 var startCountdown = setInterval(countdown, 1000);
 // when timer reaches 0, clearInterval 
 // use setTimeout to execute at the same time that the timer reaches 0? and run funtion that displays screen with score and input initials
-// create ul and li for initials to be stored in array
+// create ul and li for initials to be stored in array (document.createElement("li"); )
 
 // SCORING: number of correct answers in the time given.
 // PENALTY: incorrect answer subtracts 10 seconds from timer.
@@ -80,7 +80,7 @@ var displayHighscore = function () {
 };
 
 displayHighscore ();
-
+// maybe need array.push() to store high scores.
 
 /* BONUS */
 
