@@ -1,5 +1,10 @@
-const startQuiz = document.getElementById('startQuiz');
-const startScreen = document.getElementById('startScreen');
+var startQuiz = document.getElementById('startQuiz');
+var startScreen = document.getElementById('startScreen');
+// var quiz = document.getDocumentById('#quiz');
+// var btn1 = document.getDocumentById('btn1');
+// var btn2 = document.getDocumentById('btn2');
+// var btn3 = document.getDocumentById('btn3');
+// var btn4 = document.getDocumentById('btn4');
 
 // place for the questions
 /* array of objects as questions */
@@ -67,24 +72,6 @@ displayQs();
 // /* extra: Correct or incorrect */
 
 
-// //make starting screen
-
-// document.getElementById("start").addEventListener("click", changeState);
-//     function changeState() {
-//         document.getElementById("start").state = "hidden";
-//         document.getElementById("quiz").state = "visible";
-//     };
-
-// // start screen with start button
-
-// /* onClick "hidden" class applies to start screen AND is removed from questions */
-// // when clicked: hides start screen ?changeState("hidden");? 
-// buttonEl.addEventListener("click", function() {
-//     startEl.setAttribute("hidden");
-//     // reveales questions
-//     quizEl.setAttribute("visible");
-//   });
-
 // // starts timer
 
 // var counter = 100
@@ -96,10 +83,8 @@ displayQs();
 //             window.setTimeout("Tick()", 1000);
 //         };   
 // };
-
-
-
-var startCountdown = setInterval(countdown, 1000);
+//
+//var startCountdown = setInterval(countdown, 1000);
 
 // On click of start button, hide start screen and display quiz question 1
 

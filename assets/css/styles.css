@@ -3,11 +3,12 @@
 }
 
 :root {
- --primary: rgb(162, 174, 224);
- --text: #222222;
- --shadow: #333333;
- --answer: #2d9b7c;
- --clickbtn: rgb(0, 166, 255);   
+  --main: #999999;
+  --primary: rgb(41, 50, 75);
+  --text: #241212;
+  --shadow: #100202;
+  --answer: #294898;
+  --clickbtn: rgb(0, 166, 255);   
 }
 
 body {
@@ -20,22 +21,73 @@ body {
     font-family: Veranda, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#startScreen {
-    background: #999999;
-    padding: 30px 25px;
-    border-radius: 15px;
-    border: var(--shadow) solid 5px;
+/* nav */
+
+.infoBox {
+  background: var(--main);
+  margin: 10px;
+  padding: 30px 25px;
+  border-radius: 15px;
+  border: var(--shadow) solid 5px;
+  display: flex;
+  justify-content: space-between;
 
 }
 
-/* button */
+/* view high scores button */
+
+#viewHighScores {
+  outline: none;
+  border: none;
+  font-weight: 900;
+  padding: 10px 15px;
+  background: var(--answer);
+  font-size: 1rem;
+  border-radius: 12px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px var(--shadow);
+}
+
+#viewHighScores:hover {
+  box-shadow: 0 2px var(--shadow);
+  top: -2px;
+}
+#viewHighScores:active {
+  box-shadow: 0 0px var(--shadow);
+  top: 0;
+}
+
+/* Countdown time remaining */
+
+#counter {
+  font-weight: bolder;
+  font-size: 3rem;
+  color:rgb(255, 255, 0);
+  border:rgb(41, 50, 75) solid 5px;
+  border-radius: 12px;
+  background: var(--shadow);
+  box-shadow: 0 3px var(--shadow);
+}
+
+/* start screen */
+#startScreen {
+    background: #999999;
+    margin: 10px;
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: var(--shadow) solid 5px;
+  
+}
+
+/* start button */
 .btn {
     outline: none;
     border: none;
     display: inline-block;
     padding: 10px 15px;
     background: var(--answer);
-    font-size: 2.2rem;
+    font-size: 2rem;
     border-radius: 12px;
     position: relative;
     top: -3px;
@@ -49,6 +101,62 @@ body {
   .btn:active {
     box-shadow: 0 0px var(--shadow);
     top: 0;
+  }
+
+/* quiz screen */
+
+#quiz {
+    background: #999999;
+    margin: 10px;
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: var(--shadow) solid 5px;
+
+}
+
+#button-box {
+  background: #999999;
+  margin: 10px;
+  padding: 30px 25px;
+  border-radius: 15px;
+  border: var(--shadow) solid 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+  .btnAnswer {
+    outline: none;
+    border: none;
+    display: flex;
+    flex: space-between;
+    padding: 10px 15px;
+    background: var(--answer);
+    font-size: 2rem;
+    border-radius: 12px;
+    position: relative;
+    top: -3px;
+    box-shadow: 0 3px var(--shadow);
+  }
+  
+  .btnAnswer:hover {
+    box-shadow: 0 2px var(--shadow);
+    top: -2px;
+  }
+  .btnAnswer:active {
+    box-shadow: 0 0px var(--shadow);
+    top: 0;
+  }
+  /* correct answer */
+  #green {
+    color:green;
+  }
+  /* incorrect answer */
+  #red {
+    color:red;
   }
 
   /* @media screen and (max-width: 900px)

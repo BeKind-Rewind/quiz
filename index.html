@@ -8,29 +8,33 @@
     <title>Quiz</title>
 </head>
 <body>
-    <nav class="top">
-        <div id="timer">
-            <div id="viewHighScores">View High Scores</div>
-            <div id="counter">100</div>
+    <nav id="top">
+        <div class="infoBox">
+            <button id="viewHighScores">View High Scores</button>
+            <counter id="counter">100</counter>
         </div>
     </nav>
-    <div class="screen" id="startScreen">
-        <h1 class="welcomeQuiz">Welcome!</h1>
-        <h2 class="testKnowledge">Test your computer knowledge:</h2>
-            <p>
-                <button class="btn" id="startQuiz">Click to Start!</button>
-            </p>
-            
-    </div>
-    <div class="screen" id="quiz">
-        <div id="button-box">
-            <button class="btnAnswer" id="btn1">A</button>
-            <button class="btnAnswer" id="btn2">B</button>
-            <button class="btnAnswer" id="btn3">C</button>
-            <button class="btnAnswer" id="btn4">D</button>
+    <main>
+        <div class="screen" id="startScreen">
+            <h1 class="welcomeQuiz">Welcome!</h1>
+            <h2 class="testKnowledge">Test your computer knowledge:</h2>
+                <p>
+                    <button class="btn" id="startQuiz">Click to Start!</button>
+                </p> 
         </div>
-    </div>
-    <div class="screen" id="highScore"></div>
+        <div class="screen" id="quiz">
+            <div class=answerOptions id="button-box">
+                <button class="btnAnswer" id="btn1">A</button>
+                <button class="btnAnswer" id="btn2">B</button>
+                <button class="btnAnswer" id="btn3">C</button>
+                <button class="btnAnswer" id="btn4">D</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
 
     <script src="./assets/js/script.js"></script>
 </body>
