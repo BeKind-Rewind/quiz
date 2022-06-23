@@ -1,53 +1,63 @@
-
+const startQuiz = document.getElementById('startQuiz');
+const startScreen = document.getElementById('startScreen');
 
 // place for the questions
 /* array of objects as questions */
-var questionIndex = 0;
+var score = 0;
+
+// for (var i=0; i< questions.length; i++){
+//     var response = window.prompt(questions[i].prompt)
+//     if(response === questions[i].answer){
+//         score++;
+//         alert("Correct!");
+//     } else {
+//         alert("Nope! lol");
+//     }
+// }
+// alert("You got " + score + "/") + questions.length;
+
 
 var questions = [
     {
-        question:"When was the first computer invented?",
-        correct:"1943",
-        options:["1", "2", "3", "4"]
+        prompt:"When was the first computer invented?",
+        answer:"1943",
+        options:["1943", "1951", "1956", "1962"]
     },
     {
-        question:"Who is known as the father of computers?",
-        correct:"bob",
-        options:["a", "b", "c", "d"]
+        prompt:"Which popular company designed the first CPU?",
+        answer:"Intel Corp.",
+        options:["Apple Inc.", "Intel Corp.", "Dell Corp.", "Microsoft Corp."]
     },
     {
-        question:"What was the first computer system that used color display?",
-        correct:"1943",
-        options:["1", "2", "3", "4"]
+        prompt:"What was the first computer system that used color display?",
+        answer:"Apple",
+        options:["IMB", "Apple", "Dell", "4"]
     },
     {
-        question:"When was the first computer invented?",
-        correct:"1943",
-        options:["1", "2", "3", "4"]
+        prompt:"What is the single most popular computer system ever sold?",
+        answer:"Commodore 64",
+        options:["IBM PC", "iMac", "Apple II", "Commodore 64"]
     },
     {
-        question:"When was the first computer invented?",
-        correct:"1943",
-        options:["1", "2", "3", "4"]
+        prompt:"Which company invented the USB port?",
+        answer:"Intel Corporations",
+        options:["Intel Corp.", "HP Inc.", "Microsoft Corp.", "IBM Corp."]
     },
 ]
-console.log(questions[1]);
-
-//     "What was the name of the first computer invented?",
-//     "Who is known as the father of computers?",
-//     "What was the first computer system that used color display?",
-//     "What is the single most popular computer system ever sold?",
-//     "Which company invented the USB port?",
-// 
+console.log(questions[0]);
 
 
 //display questions 
 function displayQs(){
     var quiz = document.getElementById("quiz");
-    quiz.textContent = questions[0].question;
+    quiz.textContent = questions[0].prompt;
+    // var btnAnswer = document.getElementById("btnAnswer")
+    // btnAnswer.textContent = questions[].options;
 }
 
 displayQs();
+
+
 
 // display options 
 // be able to click option
@@ -55,13 +65,7 @@ displayQs();
 
 // //when question answered, next question comes up
 // /* extra: Correct or incorrect */
-// // 4 answers each
-// var answerQuestion1Correct="1943"
-// var answerQuestion2Correct="Electronical Numerical Integrator and computer"
-// var answerQuestion3Correct="Charles Babbage"
-// var answerQuestion4Correct="Apple"
-// var answerQuestion5Correct="Commodore 64"
-// var answerQuestion6Correct="Intel Corporations"
+
 
 // //make starting screen
 
@@ -84,17 +88,32 @@ displayQs();
 // // starts timer
 
 // var counter = 100
+
 // var countdown = function (){
 //     console.log(counter);
 //     counter--;
-//         if(counter === 0 ){
-//             console.log("blastoff");
-//             clearInterval(startCountdown);
+//         if(counter <= 0 ){
+//             window.setTimeout("Tick()", 1000);
 //         };   
 // };
 
-// var startCountdown = setInterval(countdown, 1000);
-// // when timer reaches 0, clearInterval 
+
+
+var startCountdown = setInterval(countdown, 1000);
+
+// On click of start button, hide start screen and display quiz question 1
+
+startQuiz.addEventListener('click', () => {
+    // hide button
+    startScreen.style.display = 'none';
+    //show div
+    const quiz = document.getElementById('quiz');
+    quiz.style.display = 'block';
+});
+
+function UpdateTimer() { counter.innerHTML = counter; }
+
+// when timer reaches 0, clearInterval 
 // // use setTimeout to execute at the same time that the timer reaches 0? and run funtion that displays screen with score and input initials
 // // create ul and li for initials to be stored in array (document.createElement("li"); )
 

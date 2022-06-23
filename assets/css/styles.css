@@ -3,7 +3,7 @@
 }
 
 :root {
- --primary: white;
+ --primary: rgb(162, 174, 224);
  --text: #222222;
  --shadow: #333333;
  --answer: #2d9b7c;
@@ -20,7 +20,7 @@ body {
     font-family: Veranda, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header {
+#startScreen {
     background: #999999;
     padding: 30px 25px;
     border-radius: 15px;
