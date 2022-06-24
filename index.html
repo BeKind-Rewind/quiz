@@ -16,14 +16,22 @@
     </nav>
     <main>
         <div class="screen" id="startScreen">
-            <h1 class="welcomeQuiz">Welcome!</h1>
-            <h2 class="testKnowledge">Test your computer knowledge:</h2>
-                <p>
-                    <button class="btn" id="startQuiz">Click to Start!</button>
-                </p> 
+            <h1>Welcome!</h1>
+            <h2>Test your computer knowledge:</h2>
+            <p>
+                Question: <text id="number01">0</text>
+            </p>
+            <p>
+                Score: <text id="score01">0</text>
+            </p>
+            <br>                
+            <p>
+                <button class="btn" id="startQuiz">Click to Start!</button>
+            </p> 
         </div>
         <div class="screen" id="quiz">
-            <div class=answerOptions id="button-box">
+            
+            <div class="answerOptions" id="button-box">
                 <button class="btnAnswer" id="btn1">A</button>
                 <button class="btnAnswer" id="btn2">B</button>
                 <button class="btnAnswer" id="btn3">C</button>

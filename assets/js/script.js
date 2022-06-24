@@ -1,10 +1,10 @@
 var startQuiz = document.getElementById('startQuiz');
 var startScreen = document.getElementById('startScreen');
-// var quiz = document.getDocumentById('#quiz');
-// var btn1 = document.getDocumentById('btn1');
-// var btn2 = document.getDocumentById('btn2');
-// var btn3 = document.getDocumentById('btn3');
-// var btn4 = document.getDocumentById('btn4');
+var quiz = document.getElementById('#quiz');
+var btn1 = document.getElementById('btn1');
+var btn2 = document.getElementById('btn2');
+var btn3 = document.getElementById('btn3');
+var btn4 = document.getElementById('btn4');
 
 // place for the questions
 /* array of objects as questions */
@@ -56,8 +56,9 @@ console.log(questions[0]);
 function displayQs(){
     var quiz = document.getElementById("quiz");
     quiz.textContent = questions[0].prompt;
-    // var btnAnswer = document.getElementById("btnAnswer")
-    // btnAnswer.textContent = questions[].options;
+    var btnAnswer = document.querySelectorAll(".btnAnswer")
+    // btnAnswer.textContent = questions[0].options;
+    console.log(btnAnswer)
 }
 
 displayQs();
@@ -74,17 +75,17 @@ displayQs();
 
 // // starts timer
 
-// var counter = 100
+var counter = 100
 
-// var countdown = function (){
-//     console.log(counter);
-//     counter--;
-//         if(counter <= 0 ){
-//             window.setTimeout("Tick()", 1000);
-//         };   
-// };
-//
-//var startCountdown = setInterval(countdown, 1000);
+var countdown = function (){
+    console.log(counter);
+    counter--;
+        if(counter <= 0 ){
+            window.setTimeout("Tick()", 1000);
+        };   
+};
+
+var startCountdown = setInterval(countdown, 1000);
 
 // On click of start button, hide start screen and display quiz question 1
 
