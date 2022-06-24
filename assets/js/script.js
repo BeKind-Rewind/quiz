@@ -1,27 +1,15 @@
-var startQuiz = document.getElementById('startQuiz');
-var startScreen = document.getElementById('startScreen');
-var quiz = document.getElementById('#quiz');
-var btn1 = document.getElementById('btn1');
-var btn2 = document.getElementById('btn2');
-var btn3 = document.getElementById('btn3');
-var btn4 = document.getElementById('btn4');
+var startQuiz = document.getElementById("startQuiz");
+var startScreen = document.getElementById("startScreen");
+var counter = document.getElementById("counter");
+var quiz = document.getElementById("#quiz");
+var btnAnswer = document.querySelector("btnAnswer");
+// var btn1 = document.getElementById("btn1");
+// var btn2 = document.getElementById("btn2");
+// var btn3 = document.getElementById("btn3");
+// var btn4 = document.getElementById("btn4");
 
-// place for the questions
+
 /* array of objects as questions */
-var score = 0;
-
-// for (var i=0; i< questions.length; i++){
-//     var response = window.prompt(questions[i].prompt)
-//     if(response === questions[i].answer){
-//         score++;
-//         alert("Correct!");
-//     } else {
-//         alert("Nope! lol");
-//     }
-// }
-// alert("You got " + score + "/") + questions.length;
-
-
 var questions = [
     {
         prompt:"When was the first computer invented?",
@@ -72,23 +60,32 @@ displayQs();
 // //when question answered, next question comes up
 // /* extra: Correct or incorrect */
 
+// When answer question, either correct or incorrect and next question comes up
 
-// // starts timer
 
-var counter = 100
+var score = 0;
+// for (var i=0; i< questions.length; i++){
+//     var response = window.prompt(questions[i].prompt)
+//     if(response === questions[i].answer){
+//         score++;
+//         alert("Correct!");
+//     } else {
+//         alert("Nope! lol");
+//     }
+// }
+// alert("You got " + score + "/") + questions.length;
 
+// starts timer
 var countdown = function (){
     console.log(counter);
     counter--;
         if(counter <= 0 ){
-            window.setTimeout("Tick()", 1000);
+            window.setTimeout(0, 1000);
         };   
 };
-
 var startCountdown = setInterval(countdown, 1000);
 
 // On click of start button, hide start screen and display quiz question 1
-
 startQuiz.addEventListener('click', () => {
     // hide button
     startScreen.style.display = 'none';
@@ -99,6 +96,26 @@ startQuiz.addEventListener('click', () => {
 
 function UpdateTimer() { counter.innerHTML = counter; }
 
+// On display question 1, timer counts down
+document.getElementById("gameStart").addEventListener("click", function(){
+    var timeLeft = 15;
+
+    var downloadTimer = setInterval(function function1(){
+    document.getElementById("countdown").innerHTML = timeLeft + 
+    " "+"seconds remaining";
+
+    timeLeft -=1;
+    if(timeLeft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("countdown").innerHTML = "Time is up!"
+    }
+    }, 1000);
+
+    console.log(countdown);
+});
+
+
+
 // when timer reaches 0, clearInterval 
 // // use setTimeout to execute at the same time that the timer reaches 0? and run funtion that displays screen with score and input initials
 // // create ul and li for initials to be stored in array (document.createElement("li"); )
@@ -108,24 +125,24 @@ function UpdateTimer() { counter.innerHTML = counter; }
 
 
 // // HIGHSCORE storage: see localStorage
-// var highScoreList = [
-//     'x1', 
-//     "x2", 
-//     "x3",
-//     "x4",
-//     "x5"
-// ];
+var highScoreList = [
+    'x1', 
+    "x2", 
+    "x3",
+    "x4",
+    "x5"
+];
 
-// var displayHighscore = function () {
-//     var text = "";
-//     var highScore = localStorage.getItem("highScoreList");
-//     var highScoreArray = JSON.parse(highScore);
-//     for (var i = 0; i < highScoreArray.length; i++) {
-//         text += highScoreList[i] + "<br>";
-//     };
-// };
+var displayHighscore = function () {
+    var text = "";
+    var highScore = localStorage.getItem("highScoreList");
+    var highScoreArray = JSON.parse(highScore);
+    for (var i = 0; i < highScoreArray.length; i++) {
+        text += highScoreList[i] + "<br>";
+    };
+};
 
-// displayHighscore ();
+displayHighscore ();
 // // maybe need array.push() to store high scores.
 
 // /* BONUS */
